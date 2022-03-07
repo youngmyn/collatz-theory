@@ -1,17 +1,21 @@
 import java.math.BigDecimal;
 
 public class CollatzRun {
+    public static long diapazon;
+    static {
+        diapazon = 99999;
+    }
     public static void main(String[] args) {
         long maxsteps = 0;
         long hardNum = 0;
-        for (long i = 2; i<99999999; i++) {
+        for (long i = 2; i<diapazon; i++) {
             long l = coll_func(BigDecimal.valueOf(i));
             if (l>maxsteps){
                 maxsteps = l;
                 hardNum = i;
             }
         }
-        System.out.println("The most hard humber is "+ hardNum +". We need " + maxsteps + " steps for it!");
+        System.out.println("The most hard humber is "+ hardNum +". We need " + maxsteps + " steps to make 1!");
     }
 
     public static long coll_func(BigDecimal n){
