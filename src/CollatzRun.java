@@ -7,7 +7,6 @@ public class CollatzRun {
     private static final long diapason = 999_999;
     private static final Cache<BigDecimal, Long> collatzCache = CacheBuilder.newBuilder().maximumSize(Long.MAX_VALUE).build();
 
-
     public static void main(String[] args) {
         long maxSteps = 0;
         long maxHardNumber = 0;
